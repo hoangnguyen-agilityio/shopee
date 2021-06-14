@@ -12,9 +12,14 @@ const ListProducts: FC<{ isLarge?: boolean }> = (isLarge) => {
 
   const handleSwitchPage = (link: string) => {
     let links: ProductListType['links'] = null;
-    fetch(link)
+    let fetchURL = link;
+
+    if (link) {
+      fetchURL = link.replace('http://', 'https://');
+    }
+    fetch(fetchURL)
       .then((response) => {
-        links = parseLinkHeader(response.headers.get('Link') || '');        
+        links = parseLinkHeader(response.headers.get('Link') || '');
         return response.json();
       })
       .then((data: ProductType[]) => updateProducts({ data, links }));
