@@ -10,11 +10,11 @@ import { parseLinkHeader } from 'helper';
 const ListProducts: FC<{ isLarge?: boolean }> = (isLarge) => {
   const { products, updateProducts } = useContext(AppContext);
 
-  const handleSwitchPage = async (link: string) => {
+  const handleSwitchPage = (link: string) => {
     let links: ProductListType['links'] = null;
     fetch(link)
       .then((response) => {
-        links = parseLinkHeader(response.headers.get('Link') || '');
+        links = parseLinkHeader(response.headers.get('Link') || '');        
         return response.json();
       })
       .then((data: ProductType[]) => updateProducts({ data, links }));
