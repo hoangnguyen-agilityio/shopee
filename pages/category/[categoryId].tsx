@@ -19,7 +19,7 @@ const ListProductsByCategory: FC<Props> = ({ products, categoryId = '' }) => {
 
   useEffect(() => {
     let links: ProductListType['links'] = null;
-    fetch(`http://localhost:9000/products/?name_like=${keyWord}&category_like=${categoryId}&_page=1`)
+    fetch(`https://shopee-db.herokuapp.com/products/?name_like=${keyWord}&category_like=${categoryId}&_page=1`)
       .then((response) => {
         links = parseLinkHeader(response.headers.get('Link') || '');
         return response.json();
@@ -39,7 +39,7 @@ const ListProductsByCategory: FC<Props> = ({ products, categoryId = '' }) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const res = await fetch('http://localhost:9000/categories');
+  const res = await fetch('https://shopee-db.herokuapp.com/categories');
   const categories: CategoryType[] = await res.json();
 
   const paths = categories.map((category) => ({

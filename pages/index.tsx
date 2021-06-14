@@ -38,10 +38,10 @@ const Home: FC<Props> = ({ categories, products }) => {
 };
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const categoriesRes = await fetch('http://localhost:9000/categories');
+  const categoriesRes = await fetch('https://shopee-db.herokuapp.com/categories');
   const categories: CategoryType[] = await categoriesRes.json();
 
-  const productsRes = await fetch('http://localhost:9000/products?_limit=12&_page=1');
+  const productsRes = await fetch('https://shopee-db.herokuapp.com/products?_limit=12&_page=1');
   const links = parseLinkHeader(productsRes.headers.get('Link') || '');
   const products: ProductType[] = await productsRes.json();
 

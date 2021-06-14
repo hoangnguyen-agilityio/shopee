@@ -17,8 +17,8 @@ const SearchBar = () => {
     event.preventDefault();
     const currentCategory = getCategoryFromLink();
     const fetchURL = currentCategory
-      ? `http://localhost:9000/products/?name_like=${searchKey}&category_like=${currentCategory}&_page=1`
-      : `http://localhost:9000/products/?name_like=${searchKey}&_limit=12&_page=1`;
+      ? `https://shopee-db.herokuapp.com/products/?name_like=${searchKey}&category_like=${currentCategory}&_page=1`
+      : `https://shopee-db.herokuapp.com/products/?name_like=${searchKey}&_limit=12&_page=1`;
 
     let links: ProductListType['links'] = null;
 
