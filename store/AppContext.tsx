@@ -5,19 +5,22 @@ import { ProductListType, CategoryType, AppState } from 'interfaces';
 export const AppContext = createContext<AppState>({
   products: {
     data: [],
-    links: {},
+    meta: {},
   },
+  isGettingProducts: false,
   categories: [],
   keyWord: '',
   updateCategories: () => {},
   updateProducts: () => {},
   updateKeyWord: () => {},
+  updateIsGettingProducts: () => {},
 });
 
 const AppProvider: FC = ({ children }) => {
-  const [products, setProducts] = useState<ProductListType>({ data: [], links: {} });
+  const [products, setProducts] = useState<ProductListType>({ data: [], meta: {} });
   const [categories, setCategories] = useState<CategoryType[]>([]);
   const [keyWord, setKeyWord] = useState<string>('');
+  const [isGettingProducts, setIsGettingProducts] = useState<boolean>(false);
 
   useEffect(() => {
     if (localStorage.getItem('categories')) {
@@ -47,9 +50,11 @@ const AppProvider: FC = ({ children }) => {
     products: products,
     categories: categories,
     keyWord: keyWord,
+    isGettingProducts: isGettingProducts,
     updateCategories: (categories: CategoryType[]) => setCategories(categories),
     updateProducts: (products: ProductListType) => setProducts(products),
     updateKeyWord: (keyWord: string) => setKeyWord(keyWord),
+    updateIsGettingProducts: (isGetting: boolean) => setIsGettingProducts(isGetting),
   };
 
   return <AppContext.Provider value={context}>{children}</AppContext.Provider>;

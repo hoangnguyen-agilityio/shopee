@@ -1,4 +1,7 @@
 import styled from 'styled-components';
+import theme from 'theme';
+
+const { products } = theme;
 
 interface WraperProps {
   isLarge: boolean;
@@ -16,10 +19,10 @@ export const StyledProductItemWrap = styled.li`
 `;
 
 export const StyledProductItem = styled.div`
-  background: white;
+  background: ${products.item_bg_color};
 
   &:hover {
-    box-shadow: 0 0.0625rem 20px 0 rgb(0 0 0 / 5%);
+    box-shadow: ${products.item_hover_shadow};
     transform: translateY(-0.0625rem);
   }
 `;
@@ -42,11 +45,11 @@ export const StyledProductName = styled.div`
 export const StyledProductPrice = styled.div`
   margin-top: 8px;
   font-size: 16px;
-  color: #ee4d2d;
+  color: ${products.price_color};
 `;
 
 export const StyledProductOldPrice = styled.span`
-  color: rgba(0, 0, 0, 0.54);
+  color: ${products.old_price_color};
   text-decoration: line-through;
   margin-right: 5px;
 `;
@@ -57,7 +60,7 @@ export const StyledPagination = styled.div`
   padding: 16px;
 
   & button {
-    background-color: white;
+    background-color: ${products.item_bg_color};
     border: none;
     padding: 8px 16px;
     margin-left: 8px;

@@ -6,7 +6,7 @@ import { AppContext } from 'store/AppContext';
 import { parseLinkHeader, getCategoryFromLink } from 'helper';
 
 const SearchBar = () => {
-  const { updateProducts, updateKeyWord, keyWord } = useContext(AppContext);
+  const { keyWord, updateProducts, updateKeyWord, updateIsGettingProducts } = useContext(AppContext);
   const [searchKey, setSearchKey] = useState<string>('');
 
   useEffect(() => {
@@ -20,15 +20,19 @@ const SearchBar = () => {
       ? `https://shopee-db.herokuapp.com/products/?name_like=${searchKey}&category_like=${currentCategory}&_page=1`
       : `https://shopee-db.herokuapp.com/products/?name_like=${searchKey}&_limit=12&_page=1`;
 
-    let links: ProductListType['links'] = null;
+    let meta: ProductListType['meta'] = null;
 
     updateKeyWord(searchKey);
+    updateIsGettingProducts(true);
     fetch(fetchURL)
       .then((response) => {
-        links = parseLinkHeader(response.headers.get('Link') || '');
+        meta = parseLinkHeader(response.headers.get('Link') || '');
         return response.json();
       })
-      .then((data: ProductType[]) => updateProducts({ data, links }));
+      .then((data: ProductType[]) => {
+        updateProducts({ data, meta });
+        updateIsGettingProducts(false);
+      });
   };
 
   return (

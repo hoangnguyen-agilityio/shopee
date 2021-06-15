@@ -5,23 +5,23 @@ import { StyledPagination } from './styled';
 import { ProductListType } from 'interfaces';
 
 interface Props {
-  links: ProductListType['links'];
+  meta: ProductListType['meta'];
   handleSwitchPage: (link: string) => void;
 }
 
-const Pagination: FC<Props> = ({ links, handleSwitchPage }) => {
+const Pagination: FC<Props> = ({ meta, handleSwitchPage }) => {
   return (
     <StyledPagination>
-      <button onClick={() => handleSwitchPage(links?.first || '')} disabled={!links?.first || !links?.prev}>
+      <button onClick={() => handleSwitchPage(meta?.first || '')} disabled={!meta?.first || !meta?.prev}>
         First page
       </button>
-      <button onClick={() => handleSwitchPage(links?.prev || '')} disabled={!links?.prev}>
+      <button onClick={() => handleSwitchPage(meta?.prev || '')} disabled={!meta?.prev}>
         Prev page
       </button>
-      <button onClick={() => handleSwitchPage(links?.next || '')} disabled={!links?.next}>
+      <button onClick={() => handleSwitchPage(meta?.next || '')} disabled={!meta?.next}>
         Next page
       </button>
-      <button onClick={() => handleSwitchPage(links?.last || '')} disabled={!links?.last || !links?.next}>
+      <button onClick={() => handleSwitchPage(meta?.last || '')} disabled={!meta?.last || !meta?.next}>
         Last page
       </button>
     </StyledPagination>

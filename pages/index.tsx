@@ -42,13 +42,13 @@ export const getStaticProps: GetStaticProps = async (context) => {
   const categories: CategoryType[] = await categoriesRes.json();
 
   const productsRes = await fetch('https://shopee-db.herokuapp.com/products?_limit=12&_page=1');
-  const links = parseLinkHeader(productsRes.headers.get('Link') || '');
+  const meta = parseLinkHeader(productsRes.headers.get('Link') || '');
   const products: ProductType[] = await productsRes.json();
 
   return {
     props: {
       categories,
-      products: { data: products, links: links },
+      products: { data: products, meta: meta },
     },
   };
 };

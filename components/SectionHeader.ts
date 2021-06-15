@@ -1,11 +1,14 @@
 import styled from 'styled-components';
+import theme from 'theme';
+
+const { sectionHeader } = theme;
 
 const SectionHeader = styled.h2`
-  background-color: white;
+  background-color: ${sectionHeader.bg_color};
   padding: 20px;
   text-transform: uppercase;
   font-size: 16px;
-  color: rgba(0, 0, 0, 0.54);
+  color: ${sectionHeader.color};
   font-weight: 500;
 `;
 

@@ -1,9 +1,12 @@
 import styled from 'styled-components';
 import Logo from 'public/images/logo.svg';
+import theme from 'theme';
+
+const { header } = theme;
 
 export const StyledHeader = styled.header`
-  background: linear-gradient(-180deg, #f53d2d, #f63);
-  color: white;
+  background: ${header.bg_color};
+  color: ${header.color};
   padding: 16px 0;
 `;
 

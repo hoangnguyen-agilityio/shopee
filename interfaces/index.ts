@@ -15,7 +15,7 @@ export interface ProductType {
 
 export interface ProductListType {
   data: ProductType[];
-  links?: {
+  meta?: {
     first?: string;
     last?: string;
     prev?: string;
@@ -26,8 +26,10 @@ export interface ProductListType {
 export interface AppState {
   categories: CategoryType[];
   products: ProductListType;
+  isGettingProducts: boolean;
   keyWord: string;
   updateCategories: (categories: CategoryType[]) => void;
   updateProducts: (products: ProductListType) => void;
   updateKeyWord: (keyWord: string) => void;
+  updateIsGettingProducts: (isGetting: boolean) => void;
 }

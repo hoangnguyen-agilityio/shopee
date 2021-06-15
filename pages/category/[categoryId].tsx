@@ -15,16 +15,20 @@ interface Props {
 }
 
 const ListProductsByCategory: FC<Props> = ({ products, categoryId = '' }) => {
-  const { updateProducts, keyWord } = useContext(AppContext);
+  const { keyWord, updateProducts, updateIsGettingProducts } = useContext(AppContext);
 
   useEffect(() => {
-    let links: ProductListType['links'] = null;
+    let meta: ProductListType['meta'] = null;
+    updateIsGettingProducts(true);
     fetch(`https://shopee-db.herokuapp.com/products/?name_like=${keyWord}&category_like=${categoryId}&_page=1`)
       .then((response) => {
-        links = parseLinkHeader(response.headers.get('Link') || '');
+        meta = parseLinkHeader(response.headers.get('Link') || '');
         return response.json();
       })
-      .then((data: ProductType[]) => updateProducts({ data, links }));
+      .then((data: ProductType[]) => {
+        updateProducts({ data, meta });
+        updateIsGettingProducts(false);
+      });
   }, [categoryId]);
 
   return (

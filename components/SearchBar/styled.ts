@@ -1,13 +1,16 @@
 import styled from 'styled-components';
 import SearchIcon from 'public/images/searchIcon.svg';
+import theme from 'theme';
+
+const { searchBar } = theme;
 
 export const SearchBarWrap = styled.form`
   width: 840px;
   display: flex;
   padding: 3px;
-  background: white;
+  background: ${searchBar.bg_color};
   border-radius: 2px;
-  box-shadow: 0 0.125rem 0.25rem rgb(0 0 0 / 9%);
+  box-shadow: ${searchBar.shadow};
 `;
 
 export const SearchInput = styled.input`
@@ -19,15 +22,15 @@ export const SearchInput = styled.input`
 
 export const SearchButton = styled.button`
   padding: 9px 22px;
-  background: #fb5533;
-  color: white;
+  background: ${searchBar.btn_bg_color};
+  color: ${searchBar.btn_color};
   font-size: 14px;
   line-height: 0;
-  box-shadow: 0 1px 1px 0 rgb(0 0 0 / 9%);
+  box-shadow: ${searchBar.btn_shadow};
   border-radius: 2px;
   border: none;
   cursor: pointer;
-`
+`;
 
 export const StyledSearchIcon = styled(SearchIcon)`
   width: 16px;

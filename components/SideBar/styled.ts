@@ -1,4 +1,7 @@
 import styled from 'styled-components';
+import theme from 'theme';
+
+const { sideBar } = theme;
 
 export const StyledSlideBarWrap = styled.div`
   width: 200px;
@@ -16,6 +19,6 @@ export const StyledSlideBarItem = styled.li`
 export const StyledSlideBarItemActive = styled.li`
   padding: 6px 0;
   cursor: pointer;
-  color: #ee4d2d;
+  color: ${sideBar.active_color};
   font-weight: 700;
 `;
