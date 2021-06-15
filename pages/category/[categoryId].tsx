@@ -36,7 +36,7 @@ const ListProductsByCategory: FC<Props> = ({ products, categoryId = '' }) => {
       <Header />
       <Container mt={24} display="flex">
         <SideBar activeCategory={categoryId} />
-        <Products />
+        <Products isLarge={false} />
       </Container>
     </main>
   );

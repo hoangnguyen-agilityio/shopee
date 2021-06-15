@@ -8,7 +8,7 @@ import { AppContext } from 'store/AppContext';
 import { ProductType, ProductListType } from 'interfaces';
 import { parseLinkHeader } from 'helper';
 
-const ListProducts: FC<{ isLarge?: boolean }> = (isLarge) => {
+const ListProducts: FC<{ isLarge: boolean }> = ({ isLarge }) => {
   const { products, isGettingProducts, updateProducts, updateIsGettingProducts } = useContext(AppContext);
 
   const handleSwitchPage = (link: string) => {
@@ -31,7 +31,7 @@ const ListProducts: FC<{ isLarge?: boolean }> = (isLarge) => {
   };
 
   return (
-    <StyledProductsList isLarge={isLarge ? true : false}>
+    <StyledProductsList isLarge={isLarge}>
       {isGettingProducts ? (
         <Loading />
       ) : (

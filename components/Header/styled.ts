@@ -8,6 +8,7 @@ export const StyledHeader = styled.header`
   background: ${header.bg_color};
   color: ${header.color};
   padding: 16px 0;
+  min-width: 1280px;
 `;
 
 export const StyledLogo = styled(Logo)`
