@@ -3,14 +3,23 @@ import theme from 'theme';
 
 const { products } = theme;
 
-interface WraperProps {
+interface ListProps {
   isLarge: boolean;
 }
+interface WrapProps {
+  width?: string;
+}
 
-export const StyledProductsList = styled.ul<WraperProps>`
+export const StyledProductsListWrap = styled.div<WrapProps>`
+  width: ${(props) => props.width || '100%'};
+`;
+
+export const StyledProductsList = styled.ul<ListProps>`
+  width: max-content;
+  max-width: ${(props) => (props.isLarge ? 1200 : 1000)}px;
+  flex: 1;
   display: flex;
   flex-wrap: wrap;
-  width: ${(props) => (props.isLarge ? 1200 : 1000)}px;
 `;
 
 export const StyledProductItemWrap = styled.li`
@@ -57,14 +66,14 @@ export const StyledProductOldPrice = styled.span`
 export const StyledPagination = styled.div`
   width: 100%;
   text-align: center;
-  padding: 16px;
+  padding: 16px 0;
 
   & button {
     background-color: ${products.item_bg_color};
     border: none;
-    padding: 8px 16px;
-    margin-left: 8px;
-    margin-right: 8px;
+    padding: 8px 14px;
+    margin-left: 5px;
+    margin-right: 5px;
     cursor: pointer;
   }
 `;

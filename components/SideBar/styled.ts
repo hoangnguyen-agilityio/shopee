@@ -4,7 +4,8 @@ import theme from 'theme';
 const { sideBar } = theme;
 
 export const StyledSlideBarWrap = styled.div`
-  width: 200px;
+  max-width: 200px;
+  width: 20vw;
 `;
 
 export const StyledSlideBarList = styled.ul`

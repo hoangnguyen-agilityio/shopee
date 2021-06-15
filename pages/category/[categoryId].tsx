@@ -1,5 +1,6 @@
 import { GetStaticProps, GetStaticPaths } from 'next';
 import { FC, useContext, useEffect } from 'react';
+import MediaQuery from 'react-responsive';
 
 import Header from 'components/Header';
 import Container from 'components/Container';
@@ -35,8 +36,13 @@ const ListProductsByCategory: FC<Props> = ({ products, categoryId = '' }) => {
     <main>
       <Header />
       <Container mt={24} display="flex">
-        <SideBar activeCategory={categoryId} />
-        <Products isLarge={false} />
+        <MediaQuery maxWidth={767}>
+          <Products isLarge={false} />
+        </MediaQuery>
+        <MediaQuery minWidth={768}>
+          <SideBar activeCategory={categoryId} />
+          <Products isLarge={false} width="calc(100% - 200px)" />
+        </MediaQuery>
       </Container>
     </main>
   );

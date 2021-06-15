@@ -12,8 +12,7 @@ const Container = styled.div<Props>`
   display: ${(props) => props.display || 'block'};
   align-items: ${(props) => props.alignItems || 'unset'};
   justify-content: ${(props) => props.justifyContent || 'unset'};
-  width: 1200px;
-  padding: 0 40px;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
 `;

@@ -1,14 +1,15 @@
-import { FC, useContext, useState } from 'react';
+import { FC, useContext } from 'react';
 
 import Product from './Product';
 import Pagination from './Pagination';
 import Loading from 'components/Loading';
-import { StyledProductsList } from './styled';
+import ScrollXWrap from 'components/ScrollXWrap';
+import { StyledProductsList, StyledProductsListWrap } from './styled';
 import { AppContext } from 'store/AppContext';
 import { ProductType, ProductListType } from 'interfaces';
 import { parseLinkHeader } from 'helper';
 
-const ListProducts: FC<{ isLarge: boolean }> = ({ isLarge }) => {
+const ListProducts: FC<{ isLarge: boolean, width?: string }> = ({ isLarge, width }) => {
   const { products, isGettingProducts, updateProducts, updateIsGettingProducts } = useContext(AppContext);
 
   const handleSwitchPage = (link: string) => {
@@ -31,18 +32,22 @@ const ListProducts: FC<{ isLarge: boolean }> = ({ isLarge }) => {
   };
 
   return (
-    <StyledProductsList isLarge={isLarge}>
+    <>
       {isGettingProducts ? (
         <Loading />
       ) : (
-        <>
-          {products.data.length > 0
-            ? products.data.map((product) => <Product key={product.id} product={product} />)
-            : 'Hiện không có sản phẩm nào'}
+        <StyledProductsListWrap width={width}>
+          <ScrollXWrap>
+            <StyledProductsList isLarge={isLarge}>
+              {products.data.length > 0
+                ? products.data.map((product) => <Product key={product.id} product={product} />)
+                : 'Hiện không có sản phẩm nào'}
+            </StyledProductsList>
+          </ScrollXWrap>
           {products.meta && <Pagination meta={products.meta} handleSwitchPage={handleSwitchPage} />}
-        </>
+        </StyledProductsListWrap >
       )}
-    </StyledProductsList>
+    </>
   );
 };
 

@@ -17,7 +17,7 @@ export const CategoriesHeader = styled.h2`
 `;
 
 export const StyledCategories = styled.ul`
-  width: 100%;
+  width: 1200px;
   display: flex;
   flex-wrap: wrap;
   color: ${categories.color};

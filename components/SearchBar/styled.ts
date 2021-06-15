@@ -5,9 +5,11 @@ import theme from 'theme';
 const { searchBar } = theme;
 
 export const SearchBarWrap = styled.form`
-  width: 840px;
-  display: flex;
+  max-width: 840px;
+  width: calc(100% - 50px);
+  margin-left: 20px;
   padding: 3px;
+  display: flex;
   background: ${searchBar.bg_color};
   border-radius: 2px;
   box-shadow: ${searchBar.shadow};

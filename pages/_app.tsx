@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           name="description"
           content="Mua sắm trực tuyến hàng triệu sản phẩm thời trang nam nữ, đồ điện tử, gia dụng...Giá tốt & nhiều ưu đãi. Mua và bán online trong 30 giây. Shopee đảm bảo nhận hàng hoặc hoàn tiền. Shopee Đảm Bảo | Miễn Phí Vận Chuyển | Gợi Ý Hôm Nay"
         />
-        <link rel="icon" href="/shopee.svg" />
+        <link rel="icon" href="/images/shopee.svg" />
       </Head>
       <AppProvider>
         <Component {...pageProps} />

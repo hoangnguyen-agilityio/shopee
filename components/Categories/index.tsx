@@ -1,6 +1,7 @@
 import { FC } from 'react';
 
 import Category from './Category';
+import ScrollXWrap from 'components/ScrollXWrap';
 import { CategoriesWrap, CategoriesHeader, StyledCategories } from './styled';
 
 import { CategoryType } from 'interfaces';
@@ -17,11 +18,13 @@ const Catergories: FC<Props> = ({ categories = [] }) => {
   return (
     <CategoriesWrap>
       <CategoriesHeader>Danh mục</CategoriesHeader>
-      <StyledCategories>
-        {categories.map((category) => (
-          <Category key={category.id} category={category} />
-        ))}
-      </StyledCategories>
+      <ScrollXWrap>
+        <StyledCategories>
+          {categories.map((category) => (
+            <Category key={category.id} category={category} />
+          ))}
+        </StyledCategories>
+      </ScrollXWrap>
     </CategoriesWrap>
   );
 };
