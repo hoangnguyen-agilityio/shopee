@@ -25,9 +25,9 @@ const ListProducts: FC<Props> = ({ products = { data: [], meta: null }, isLarge 
     let meta: ProductListType['meta'] = null;
     let fetchURL = link;
 
-    // if (link) {
-    //   fetchURL = link.replace('http://', 'https://');
-    // }
+    if (link) {
+      fetchURL = link.replace('http://', 'https://');
+    }
     setIsLoading(true);
     fetch(fetchURL)
       .then((response) => {
