@@ -16,9 +16,7 @@ const Product: FC<{ product: ProductType }> = ({ product }) => {
   return (
     <StyledProductItemWrap>
       <StyledProductItem>
-        <div>
-          <Image src={product.src} alt={product.name} width={188} height={188} />
-        </div>
+        <Image src={product.imageLink} alt={product.name} width={188} height={188} />
         <StyledProductBody>
           <StyledProductName>{product.name}</StyledProductName>
           <StyledProductPrice>

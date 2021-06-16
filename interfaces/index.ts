@@ -1,16 +1,18 @@
 export interface CategoryType {
   id: string;
   name: string;
-  src: string;
+  imageLink: string;
+  slug: string;
 }
 
 export interface ProductType {
   id: string;
   name: string;
-  src: string;
-  category: string[];
+  imageLink: string;
+  categories: string[];
   price: number;
   oldPrice?: number;
+  slug: string;
 }
 
 export interface ProductListType {
@@ -21,15 +23,4 @@ export interface ProductListType {
     prev?: string;
     next?: string;
   } | null;
-}
-
-export interface AppState {
-  categories: CategoryType[];
-  products: ProductListType;
-  isGettingProducts: boolean;
-  keyWord: string;
-  updateCategories: (categories: CategoryType[]) => void;
-  updateProducts: (products: ProductListType) => void;
-  updateKeyWord: (keyWord: string) => void;
-  updateIsGettingProducts: (isGetting: boolean) => void;
 }

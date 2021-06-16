@@ -10,11 +10,11 @@ interface Props {
   category: CategoryType;
 }
 
-const Catergory: FC<Props> = ({ category }) => (
-  <Link href={`/category/${category.id}`}>
+const Catergory: FC<Props> = ({ category = { imageLink: '' } }) => (
+  <Link href={`/category/${category?.slug}`}>
     <CategoryItem>
-      <Image src={category.src} alt={category.name} width={80} height={80} />
-      <h3>{category.name}</h3>
+      <Image src={category.imageLink} alt={category?.name} width={80} height={80} />
+      <h3>{category?.name}</h3>
     </CategoryItem>
   </Link>
 );

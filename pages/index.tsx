@@ -1,4 +1,4 @@
-import { FC, useEffect, useContext } from 'react';
+import { FC } from 'react';
 import { GetStaticProps } from 'next';
 
 import Header from 'components/Header';
@@ -7,7 +7,6 @@ import SectionHeader from 'components/SectionHeader';
 import Categories from 'components/Categories';
 import Products from 'components/Products';
 
-import { AppContext } from 'store/AppContext';
 import { CategoryType, ProductType, ProductListType } from 'interfaces';
 import { parseLinkHeader } from 'helper';
 
@@ -16,33 +15,23 @@ interface Props {
   products: ProductListType;
 }
 
-const Home: FC<Props> = ({ categories, products }) => {
-  const { updateCategories, updateProducts, updateKeyWord, keyWord } = useContext(AppContext);
-  
-  useEffect(() => {
-    updateCategories(categories);
-    updateProducts(products);
-    updateKeyWord('');
-  }, []);
-  
-  return (
-    <main>
-      <Header />
-      <Container mt={24}>
-        <Categories categories={categories} />
-        <SectionHeader>Gợi ý hôm nay</SectionHeader>
-        <Products isLarge />
-      </Container>
-    </main>
-  );
-};
+const Home: FC<Props> = ({ categories, products }) => (
+  <main>
+    <Header />
+    <Container mt={24}>
+      <Categories categories={categories} />
+      <SectionHeader>Gợi ý hôm nay</SectionHeader>
+      <Products products={products} isLarge />
+    </Container>
+  </main>
+);
 
-export const getStaticProps: GetStaticProps = async (context) => {
-  const categoriesRes = await fetch('https://shopee-db.herokuapp.com/categories');
+export const getStaticProps: GetStaticProps = async () => {
+  const categoriesRes = await fetch(`${process.env.API_HOST}categories`);
   const categories: CategoryType[] = await categoriesRes.json();
 
-  const productsRes = await fetch('https://shopee-db.herokuapp.com/products?_limit=12&_page=1');
-  const meta = parseLinkHeader(productsRes.headers.get('Link') || '');
+  const productsRes = await fetch(`${process.env.API_HOST}products?_limit=12&_page=1`);
+  const meta: ProductListType['meta'] = parseLinkHeader(productsRes.headers.get('Link') || '');
   const products: ProductType[] = await productsRes.json();
 
   return {

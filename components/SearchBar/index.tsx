@@ -1,43 +1,24 @@
-import { SyntheticEvent, useContext, useState, useEffect } from 'react';
+import { useState, SyntheticEvent, ChangeEvent } from 'react';
+import { useRouter } from 'next/router';
 
 import { SearchBarWrap, SearchInput, SearchButton, StyledSearchIcon } from './styled';
-import { ProductType, ProductListType } from 'interfaces';
-import { AppContext } from 'store/AppContext';
-import { parseLinkHeader, getCategoryFromLink } from 'helper';
 
 const SearchBar = () => {
-  const { keyWord, updateProducts, updateKeyWord, updateIsGettingProducts } = useContext(AppContext);
-  const [searchKey, setSearchKey] = useState<string>('');
-
-  useEffect(() => {
-    setSearchKey(keyWord);
-  }, [keyWord]);
+  const router = useRouter();
+  const keyWord: string = String(router.query?.keyWord || '');
+  const [searchKey, setSearchKey] = useState<string>(keyWord);
 
   const handleSubmitSearch = (event: SyntheticEvent) => {
     event.preventDefault();
-    const currentCategory = getCategoryFromLink();
-    const fetchURL = currentCategory
-      ? `https://shopee-db.herokuapp.com/products/?name_like=${searchKey}&category_like=${currentCategory}&_page=1`
-      : `https://shopee-db.herokuapp.com/products/?name_like=${searchKey}&_limit=12&_page=1`;
-
-    let meta: ProductListType['meta'] = null;
-
-    updateKeyWord(searchKey);
-    updateIsGettingProducts(true);
-    fetch(fetchURL)
-      .then((response) => {
-        meta = parseLinkHeader(response.headers.get('Link') || '');
-        return response.json();
-      })
-      .then((data: ProductType[]) => {
-        updateProducts({ data, meta });
-        updateIsGettingProducts(false);
-      });
+    router.push(`/search?keyWord=${searchKey}`);
   };
 
   return (
     <SearchBarWrap onSubmit={handleSubmitSearch}>
-      <SearchInput value={searchKey} onChange={(event) => setSearchKey(event.target.value)} />
+      <SearchInput
+        value={searchKey}
+        onChange={(event: ChangeEvent<HTMLInputElement>) => setSearchKey(event.target.value)}
+      />
       <SearchButton>
         <StyledSearchIcon />
       </SearchButton>

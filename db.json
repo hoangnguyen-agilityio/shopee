@@ -3,222 +3,257 @@
     {
       "id": "1",
       "name": "Thời Trang Nam",
-      "src": "https://cf.shopee.vn/file/687f3967b7c2fe6a134a2c11894eea4b_tn"
+      "slug": "thoi-trang-nam",
+      "imageLink": "https://cf.shopee.vn/file/687f3967b7c2fe6a134a2c11894eea4b_tn"
     },
     {
       "id": "2",
       "name": "Điện Thoại & Phụ Kiện",
-      "src": "https://cf.shopee.vn/file/31234a27876fb89cd522d7e3db1ba5ca_tn"
+      "slug": "dien-thoai-phu-kien",
+      "imageLink": "https://cf.shopee.vn/file/31234a27876fb89cd522d7e3db1ba5ca_tn"
     },
     {
       "id": "3",
       "name": "Thiết Bị Điện Tử",
-      "src": "https://cf.shopee.vn/file/978b9e4cb61c611aaaf58664fae133c5_tn"
+      "slug": "thiet-bi-dien-tu",
+      "imageLink": "https://cf.shopee.vn/file/978b9e4cb61c611aaaf58664fae133c5_tn"
     },
     {
       "id": "4",
       "name": "Máy tính & Laptop",
-      "src": "https://cf.shopee.vn/file/c3f3edfaa9f6dafc4825b77d8449999d_tn"
+      "slug": "may-tinh-laptop",
+      "imageLink": "https://cf.shopee.vn/file/c3f3edfaa9f6dafc4825b77d8449999d_tn"
     },
     {
       "id": "5",
       "name": "Máy ảnh - Máy quay phim",
-      "src": "https://cf.shopee.vn/file/ec14dd4fc238e676e43be2a911414d4d_tn"
+      "slug": "may-anh-may-quay-phim",
+      "imageLink": "https://cf.shopee.vn/file/ec14dd4fc238e676e43be2a911414d4d_tn"
     },
     {
       "id": "6",
       "name": "Đồng Hồ",
-      "src": "https://cf.shopee.vn/file/86c294aae72ca1db5f541790f7796260_tn"
+      "slug": "dong-ho",
+      "imageLink": "https://cf.shopee.vn/file/86c294aae72ca1db5f541790f7796260_tn"
     },
     {
       "id": "7",
       "name": "Giày Dép Nam",
-      "src": "https://cf.shopee.vn/file/74ca517e1fa74dc4d974e5d03c3139de_tn"
+      "slug": "giay-dep-nam",
+      "imageLink": "https://cf.shopee.vn/file/74ca517e1fa74dc4d974e5d03c3139de_tn"
     },
     {
       "id": "8",
       "name": "Thiết Bị Điện Gia Dụng",
-      "src": "https://cf.shopee.vn/file/7abfbfee3c4844652b4a8245e473d857_tn"
+      "slug": "thiet-bi-dien",
+      "imageLink": "https://cf.shopee.vn/file/7abfbfee3c4844652b4a8245e473d857_tn"
     },
     {
       "id": "9",
       "name": "Thể Thao & Du Lịch",
-      "src": "https://cf.shopee.vn/file/6cb7e633f8b63757463b676bd19a50e4_tn"
+      "slug": "the-thao-du-lich",
+      "imageLink": "https://cf.shopee.vn/file/6cb7e633f8b63757463b676bd19a50e4_tn"
     },
     {
       "id": "10",
       "name": "Ô tô - xe máy - xe đạp",
-      "src": "https://cf.shopee.vn/file/3fb459e3449905545701b418e8220334_tn"
+      "slug": "oto-xe-may-xe-dap",
+      "imageLink": "https://cf.shopee.vn/file/3fb459e3449905545701b418e8220334_tn"
     },
     {
       "id": "11",
       "name": "Thời Trang Nữ",
-      "src": "https://cf.shopee.vn/file/75ea42f9eca124e9cb3cde744c060e4d_tn"
+      "slug": "thoi-trang-nu",
+      "imageLink": "https://cf.shopee.vn/file/75ea42f9eca124e9cb3cde744c060e4d_tn"
     },
     {
       "id": "12",
       "name": "Mẹ & Bé",
-      "src": "https://cf.shopee.vn/file/099edde1ab31df35bc255912bab54a5e_tn"
+      "slug": "me-be",
+      "imageLink": "https://cf.shopee.vn/file/099edde1ab31df35bc255912bab54a5e_tn"
     },
     {
       "id": "13",
       "name": "Nhà Cửa & Đời Sống",
-      "src": "https://cf.shopee.vn/file/24b194a695ea59d384768b7b471d563f_tn"
+      "slug": "nha-cua-doi-song",
+      "imageLink": "https://cf.shopee.vn/file/24b194a695ea59d384768b7b471d563f_tn"
     },
     {
       "id": "14",
       "name": "Sức Khỏe & Sắc Đẹp",
-      "src": "https://cf.shopee.vn/file/bba68b7dc2d664748dd075d500049d72_tn"
+      "slug": "suc-khoe-sac-dep",
+      "imageLink": "https://cf.shopee.vn/file/bba68b7dc2d664748dd075d500049d72_tn"
     },
     {
       "id": "15",
       "name": "Giày Dép Nữ",
-      "src": "https://cf.shopee.vn/file/48630b7c76a7b62bc070c9e227097847_tn"
+      "slug": "giay-dep-nu",
+      "imageLink": "https://cf.shopee.vn/file/48630b7c76a7b62bc070c9e227097847_tn"
     },
     {
       "id": "16",
       "name": "Túi Ví",
-      "src": "https://cf.shopee.vn/file/fa6ada2555e8e51f369718bbc92ccc52_tn"
+      "slug": "tui-vi",
+      "imageLink": "https://cf.shopee.vn/file/fa6ada2555e8e51f369718bbc92ccc52_tn"
     },
     {
       "id": "17",
       "name": "Phụ Kiện Thời Trang",
-      "src": "https://cf.shopee.vn/file/8e71245b9659ea72c1b4e737be5cf42e_tn"
+      "slug": "phu-kien-thoi-trang",
+      "imageLink": "https://cf.shopee.vn/file/8e71245b9659ea72c1b4e737be5cf42e_tn"
     },
     {
       "id": "18",
       "name": "Bách Hoá Online",
-      "src": "https://cf.shopee.vn/file/c432168ee788f903f1ea024487f2c889_tn"
+      "slug": "bach-hoa-online",
+      "imageLink": "https://cf.shopee.vn/file/c432168ee788f903f1ea024487f2c889_tn"
     },
     {
       "id": "19",
       "name": "Voucher & Dịch vụ",
-      "src": "https://cf.shopee.vn/file/b0f78c3136d2d78d49af71dd1c3f38c1_tn"
+      "slug": "voucher-dich-vu",
+      "imageLink": "https://cf.shopee.vn/file/b0f78c3136d2d78d49af71dd1c3f38c1_tn"
     },
     {
       "id": "20",
       "name": "Nhà Sách Online",
-      "src": "https://cf.shopee.vn/file/36013311815c55d303b0e6c62d6a8139_tn"
+      "slug": "nha-sach-online",
+      "imageLink": "https://cf.shopee.vn/file/36013311815c55d303b0e6c62d6a8139_tn"
     }
   ],
   "products": [
     {
       "id": "1",
       "name": "Áo thun bò sữa tay lỡ, form rộng Unisex ATLBO",
-      "src": "https://cf.shopee.vn/file/c83764f21a4ffb1e9242ed7188d70f8f_tn",
-      "category": ["1", "11"],
+      "slug": "ao-thun-bo-sua-tay-lo-form-rong-unisex-ATLBO-1",
+      "imageLink": "https://cf.shopee.vn/file/c83764f21a4ffb1e9242ed7188d70f8f_tn",
+      "categories": ["1", "11"],
       "price": 78000,
       "oldPrice": 150000
     },
     {
       "id": "2",
       "name": "Áo thun nam cổ tròn POLOMAN vải Cotton co giãn,dày dặn, form regular fit thoải mái",
-      "src": "https://cf.shopee.vn/file/aed791c1d5e852061b84df75802c42d3_tn",
-      "category": ["1"],
+      "slug": "ao-thun-nam-co-tron-POLOMAN-vai-Cotton-co-gian-day-dan-form-regular-fit-thoai-mai",
+      "imageLink": "https://cf.shopee.vn/file/aed791c1d5e852061b84df75802c42d3_tn",
+      "categories": ["1"],
       "price": 149000,
       "oldPrice": 150000
     },
     {
       "id": "3",
       "name": "Áo thun tay lỡ Unisex Yinxx, áo phông form rộng ATL138",
-      "src": "https://cf.shopee.vn/file/199e5c2795dc40b13a12058cca4704a0_tn",
-      "category": ["1", "11"],
+      "slug": "Ao-thun-tay-lo-Unisex-Yinxx-ao-phong-form-rong-ATL138",
+      "imageLink": "https://cf.shopee.vn/file/199e5c2795dc40b13a12058cca4704a0_tn",
+      "categories": ["1", "11"],
       "price": 69000,
       "oldPrice": 80000
     },
     {
       "id": "4",
       "name": "Sạc Dự Phòng Romoss Sense 4 10000mah Chính Hãng Check Code - BH 1 năm",
-      "src": "https://cf.shopee.vn/file/dd200b363e9c48af6697e7abd9d5138c_tn",
-      "category": ["2"],
+      "slug": "Sac-Du-Phong-Romoss-Sense-4-10000mah-Chinh-Hang-Check-Code-BH-1-nam",
+      "imageLink": "https://cf.shopee.vn/file/dd200b363e9c48af6697e7abd9d5138c_tn",
+      "categories": ["2"],
       "price": 205000,
       "oldPrice": 289000
     },
     {
       "id": "5",
       "name": "Cường Lực Full Màn 10D Tê Giác Loại 1 Chính Hãng",
-      "src": "https://cf.shopee.vn/file/bf8f9ec4c12a727f770ee66856c6fd8a_tn",
-      "category": ["2"],
+      "slug": "Cuong-Luc-Full-Man-10D-Te-Giac-Loai-1-Chinh-Hang",
+      "imageLink": "https://cf.shopee.vn/file/bf8f9ec4c12a727f770ee66856c6fd8a_tn",
+      "categories": ["2"],
       "price": 25000,
       "oldPrice": ""
     },
     {
       "id": "6",
       "name": "[LOẠI 1] Loa Kéo Karaoke Bluetooth JBZ NE108 Bass 2 Tấc - BH 6 Tháng",
-      "src": "https://cf.shopee.vn/file/b88fd50ded088571fcc9050997db659c_tn",
-      "category": ["1", "3"],
+      "slug": "LOAI-1-Loa-Keo-Karaoke-Bluetooth-JBZ-NE108-Bass-2-Tac-BH-6-Thang",
+      "imageLink": "https://cf.shopee.vn/file/b88fd50ded088571fcc9050997db659c_tn",
+      "categories": ["1", "3"],
       "price": 1090000,
       "oldPrice": 1800000
     },
     {
       "id": "7",
       "name": "Tai Nghe Nhét Tai Hoco M1 Chính Hãng - Bảo Hành 3 Tháng | Tai Nghe IPhone",
-      "src": "https://cf.shopee.vn/file/737839c37e30e7c74bb6c9ce0f4d4ab6_tn",
-      "category": ["1", "3"],
+      "slug": "Tai-Nghe-Nhet-Tai-Hoco-M1-Chinh-Hang-Bao-Hanh-3-Thang-Tai-Nghe-IPhone",
+      "imageLink": "https://cf.shopee.vn/file/737839c37e30e7c74bb6c9ce0f4d4ab6_tn",
+      "categories": ["1", "3"],
       "price": 49000,
       "oldPrice": 70000
     },
     {
       "id": "8",
       "name": "Áo thun bò sữa tay lỡ, form rộng Unisex ATLBO",
-      "src": "https://cf.shopee.vn/file/c83764f21a4ffb1e9242ed7188d70f8f_tn",
-      "category": ["1"],
+      "slug": "ao-thun-bo-sua-tay-lo-form-rong-unisex-ATLBO-8",
+      "imageLink": "https://cf.shopee.vn/file/c83764f21a4ffb1e9242ed7188d70f8f_tn",
+      "categories": ["1"],
       "price": 78000,
       "oldPrice": 150000
     },
     {
       "id": "9",
       "name": "Áo thun bò sữa tay lỡ, form rộng Unisex ATLBO",
-      "src": "https://cf.shopee.vn/file/c83764f21a4ffb1e9242ed7188d70f8f_tn",
-      "category": ["1"],
+      "slug": "ao-thun-bo-sua-tay-lo-form-rong-unisex-ATLBO-9",
+      "imageLink": "https://cf.shopee.vn/file/c83764f21a4ffb1e9242ed7188d70f8f_tn",
+      "categories": ["1"],
       "price": 78000,
       "oldPrice": 150000
     },
     {
       "id": "10",
       "name": "Áo thun bò sữa tay lỡ, form rộng Unisex ATLBO",
-      "src": "https://cf.shopee.vn/file/c83764f21a4ffb1e9242ed7188d70f8f_tn",
-      "category": ["1"],
+      "slug": "ao-thun-bo-sua-tay-lo-form-rong-unisex-ATLBO-10",
+      "imageLink": "https://cf.shopee.vn/file/c83764f21a4ffb1e9242ed7188d70f8f_tn",
+      "categories": ["1"],
       "price": 78000,
       "oldPrice": 150000
     },
     {
       "id": "11",
       "name": "Áo thun bò sữa tay lỡ, form rộng Unisex ATLBO",
-      "src": "https://cf.shopee.vn/file/c83764f21a4ffb1e9242ed7188d70f8f_tn",
-      "category": ["1", "3"],
+      "slug": "ao-thun-bo-sua-tay-lo-form-rong-unisex-ATLBO-11",
+      "imageLink": "https://cf.shopee.vn/file/c83764f21a4ffb1e9242ed7188d70f8f_tn",
+      "categories": ["1", "3"],
       "price": 78000,
       "oldPrice": 150000
     },
     {
       "id": "12",
       "name": "Áo thun bò sữa tay lỡ, form rộng Unisex TEST",
-      "src": "https://cf.shopee.vn/file/c83764f21a4ffb1e9242ed7188d70f8f_tn",
-      "category": ["1", "3"],
+      "slug": "ao-thun-bo-sua-tay-lo-form-rong-unisex-TEST-12",
+      "imageLink": "https://cf.shopee.vn/file/c83764f21a4ffb1e9242ed7188d70f8f_tn",
+      "categories": ["1", "3"],
       "price": 78000,
       "oldPrice": 150000
     },
     {
       "id": "13",
       "name": "Áo thun bò sữa tay lỡ, form rộng Unisex TEST",
-      "src": "https://cf.shopee.vn/file/c83764f21a4ffb1e9242ed7188d70f8f_tn",
-      "category": ["1", "3"],
+      "slug": "ao-thun-bo-sua-tay-lo-form-rong-unisex-TEST-13",
+      "imageLink": "https://cf.shopee.vn/file/c83764f21a4ffb1e9242ed7188d70f8f_tn",
+      "categories": ["1", "3"],
       "price": 78000,
       "oldPrice": 150000
     },
     {
       "id": "14",
       "name": "Áo thun bò sữa tay lỡ, form rộng Unisex TEST",
-      "src": "https://cf.shopee.vn/file/c83764f21a4ffb1e9242ed7188d70f8f_tn",
-      "category": ["1", "3"],
+      "slug": "ao-thun-bo-sua-tay-lo-form-rong-unisex-TEST-14",
+      "imageLink": "https://cf.shopee.vn/file/c83764f21a4ffb1e9242ed7188d70f8f_tn",
+      "categories": ["1", "3"],
       "price": 78000,
       "oldPrice": 150000
     },
     {
       "id": "15",
       "name": "Áo thun bò sữa tay lỡ, form rộng Unisex TEST",
-      "src": "https://cf.shopee.vn/file/c83764f21a4ffb1e9242ed7188d70f8f_tn",
-      "category": ["1", "3"],
+      "slug": "ao-thun-bo-sua-tay-lo-form-rong-unisex-TEST-15",
+      "imageLink": "https://cf.shopee.vn/file/c83764f21a4ffb1e9242ed7188d70f8f_tn",
+      "categories": ["1", "3"],
       "price": 78000,
       "oldPrice": 150000
     }

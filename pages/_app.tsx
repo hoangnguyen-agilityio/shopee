@@ -2,11 +2,9 @@ import '../styles/globals.css';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 
-import AppProvider from 'store/AppContext';
-
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <div>
+    <>
       <Head>
         <title>Shopee Việt Nam | Mua và Bán Trên Ứng Dụng Di Động Hoặc Website</title>
         <meta
@@ -15,10 +13,8 @@ function MyApp({ Component, pageProps }: AppProps) {
         />
         <link rel="icon" href="/images/shopee.svg" />
       </Head>
-      <AppProvider>
-        <Component {...pageProps} />
-      </AppProvider>
-    </div>
+      <Component {...pageProps} />
+    </>
   );
 }
 export default MyApp;
