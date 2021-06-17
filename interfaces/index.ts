@@ -5,15 +5,32 @@ export interface CategoryType {
   slug: string;
 }
 
+export const initCategory = {
+  id: '',
+  name: '',
+  imageLink: '/images/shopee.svg',
+  slug: '',
+};
+
 export interface ProductType {
   id: string;
   name: string;
   imageLink: string;
   categories: string[];
-  price: number;
-  oldPrice?: number;
+  price: string;
+  oldPrice?: string;
   slug: string;
 }
+
+export const initProduct = {
+  id: '',
+  name: '',
+  imageLink: '/images/shopee.svg',
+  categories: [],
+  price: '',
+  oldPrice: '',
+  slug: '',
+};
 
 export interface ProductListType {
   data: ProductType[];
@@ -24,3 +41,8 @@ export interface ProductListType {
     next?: string;
   } | null;
 }
+
+export const initProductList = {
+  data: [],
+  meta: null,
+};

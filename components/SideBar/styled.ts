@@ -15,11 +15,9 @@ export const StyledSlideBarList = styled.ul`
 export const StyledSlideBarItem = styled.li`
   padding: 6px 0;
   cursor: pointer;
-`;
 
-export const StyledSlideBarItemActive = styled.li`
-  padding: 6px 0;
-  cursor: pointer;
-  color: ${sideBar.active_color};
-  font-weight: 700;
+  &.active {
+    color: ${sideBar.active_color};
+    font-weight: 700;
+  }
 `;

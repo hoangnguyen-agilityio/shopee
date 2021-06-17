@@ -1,5 +1,7 @@
 import styled from 'styled-components';
+
 import SearchIcon from 'public/images/searchIcon.svg';
+
 import theme from 'theme';
 
 const { searchBar } = theme;

@@ -2,8 +2,10 @@ import { FC } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
-import { StyledSlideBarWrap, StyledSlideBarItem, StyledSlideBarItemActive, StyledSlideBarList } from './styled';
+import { StyledSlideBarWrap, StyledSlideBarItem, StyledSlideBarList } from './styled';
+
 import { CategoryType } from 'interfaces';
+import { CATEGORIES } from 'helper/constTexts';
 
 interface Props {
   activeCategory: string;
@@ -17,18 +19,16 @@ const SideBar: FC<Props> = ({ categories = [], activeCategory = '', isSearching 
 
   return (
     <StyledSlideBarWrap>
-      <div>{isSearching ? 'Lọc kết quả tìm kiếm theo: ' : 'Danh Mục:'}</div>
+      <div>{isSearching ? CATEGORIES.SEARCHING_TITLE : CATEGORIES.TITLE}:</div>
       <StyledSlideBarList>
         {categories.map((category) => (
           <Link
             href={isSearching ? `/search?keyWord=${keyWord}&category=${category.slug}` : `/category/${category.slug}`}
             key={category.id}
           >
-            {activeCategory === category.id ? (
-              <StyledSlideBarItemActive>{category.name}</StyledSlideBarItemActive>
-            ) : (
-              <StyledSlideBarItem>{category.name}</StyledSlideBarItem>
-            )}
+            <StyledSlideBarItem className={activeCategory === category.id ? 'active' : ''}>
+              {category.name}
+            </StyledSlideBarItem>
           </Link>
         ))}
       </StyledSlideBarList>

@@ -1,43 +1,40 @@
 import { FC, useState, useEffect } from 'react';
 
-import Product from './Product';
-import Pagination from './Pagination';
 import Loading from 'components/Loading';
 import ScrollXWrap from 'components/ScrollXWrap';
+import Product from './Product';
+import Pagination from './Pagination';
 import { StyledProductsList, StyledProductsListWrap } from './styled';
-import { ProductType, ProductListType } from 'interfaces';
-import { parseLinkHeader } from 'helper';
 
+import { ProductListType, initProductList } from 'interfaces';
+import API from 'helper/api';
+import { PRODUCTS } from 'helper/constTexts';
 interface Props {
   products: ProductListType;
   isLarge: boolean;
   width?: string;
 }
 
-const ListProducts: FC<Props> = ({ products = { data: [], meta: null }, isLarge = false, width }) => {
+const ListProducts: FC<Props> = ({ products = initProductList, isLarge = false, width }) => {
   const [currentProducts, setCurrentProducts] = useState<ProductListType>(products);
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
   useEffect(() => {
     setCurrentProducts(products);
-  }, [products])
-  const handleSwitchPage = (link: string) => {
-    let meta: ProductListType['meta'] = null;
-    let fetchURL = link;
+  }, [products]);
 
-    if (link) {
-      fetchURL = link.replace('http://', 'https://');
-    }
+  const handleSwitchPage = async (link: string) => {
     setIsLoading(true);
-    fetch(fetchURL)
-      .then((response) => {
-        meta = parseLinkHeader(response.headers.get('Link') || '');
-        return response.json();
-      })
-      .then((data: ProductType[]) => {
-        setCurrentProducts({ data, meta });
-        setIsLoading(false);
-      });
+    const res = await API.getProductsByLink(link);
+    setIsLoading(false);
+    setCurrentProducts(
+      res.apiError || res.errorCode
+        ? products
+        : {
+            data: res.data,
+            meta: res.meta,
+          },
+    );
   };
 
   return (
@@ -50,7 +47,7 @@ const ListProducts: FC<Props> = ({ products = { data: [], meta: null }, isLarge 
             <StyledProductsList isLarge={isLarge}>
               {currentProducts.data.length > 0
                 ? currentProducts.data.map((product) => <Product key={product.id} product={product} />)
-                : 'Hiện không có sản phẩm nào'}
+                : PRODUCTS.EMPTY}
             </StyledProductsList>
           </ScrollXWrap>
           {currentProducts.meta && <Pagination meta={currentProducts.meta} handleSwitchPage={handleSwitchPage} />}

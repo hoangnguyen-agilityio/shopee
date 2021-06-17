@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import { GetStaticProps } from 'next';
+import fs from 'fs';
 
 import Header from 'components/Header';
 import Container from 'components/Container';
@@ -7,8 +8,10 @@ import SectionHeader from 'components/SectionHeader';
 import Categories from 'components/Categories';
 import Products from 'components/Products';
 
-import { CategoryType, ProductType, ProductListType } from 'interfaces';
-import { parseLinkHeader } from 'helper';
+import { CategoryType, ProductListType, initProductList } from 'interfaces';
+import { categoriesFilePath } from 'helper';
+import API from 'helper/api';
+import { PRODUCTS } from 'helper/constTexts';
 
 interface Props {
   categories: CategoryType[];
@@ -20,24 +23,29 @@ const Home: FC<Props> = ({ categories, products }) => (
     <Header />
     <Container mt={24}>
       <Categories categories={categories} />
-      <SectionHeader>Gợi ý hôm nay</SectionHeader>
+      <SectionHeader>{PRODUCTS.TITLE}</SectionHeader>
       <Products products={products} isLarge />
     </Container>
   </main>
 );
 
 export const getStaticProps: GetStaticProps = async () => {
-  const categoriesRes = await fetch(`${process.env.API_HOST}categories`);
-  const categories: CategoryType[] = await categoriesRes.json();
+  const categoriesRes = await API.getCategories();
+  const categories: CategoryType[] = categoriesRes.errorCode || categoriesRes.apiError ? [] : categoriesRes;
+  const productsRes = await API.getProducts('?_limit=12&_page=1');
+  const products: ProductListType =
+    productsRes.errorCode || productsRes.apiError
+      ? initProductList
+      : { data: productsRes.data, meta: productsRes.meta };
 
-  const productsRes = await fetch(`${process.env.API_HOST}products?_limit=12&_page=1`);
-  const meta: ProductListType['meta'] = parseLinkHeader(productsRes.headers.get('Link') || '');
-  const products: ProductType[] = await productsRes.json();
+  if (categories.length > 0) {
+    fs.writeFileSync(categoriesFilePath(), JSON.stringify(categories));
+  }
 
   return {
     props: {
       categories,
-      products: { data: products, meta: meta },
+      products,
     },
   };
 };

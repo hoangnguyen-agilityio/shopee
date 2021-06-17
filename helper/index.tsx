@@ -1,3 +1,5 @@
+import path from 'path';
+
 export const parseLinkHeader = (linkHeader: string) => {
   if (linkHeader) {
     return Object.fromEntries(
@@ -21,3 +23,9 @@ export const getCategoryFromLink = () => {
 
   return null;
 };
+
+export const categoriesFilePath = () => {
+  return path.join(process.cwd(), 'store', 'catergories.json');
+};
+
+export const priceFormat = (price: string) => `đ${price.replace(/\d(?=(\d{3})+$)/g, '$&,')}`;

@@ -29,6 +29,7 @@ export const StyledProductItemWrap = styled.li`
 
 export const StyledProductItem = styled.div`
   background: ${products.item_bg_color};
+  cursor: pointer;
 
   &:hover {
     box-shadow: ${products.item_hover_shadow};

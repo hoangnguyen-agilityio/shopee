@@ -128,8 +128,8 @@
       "slug": "ao-thun-bo-sua-tay-lo-form-rong-unisex-ATLBO-1",
       "imageLink": "https://cf.shopee.vn/file/c83764f21a4ffb1e9242ed7188d70f8f_tn",
       "categories": ["1", "11"],
-      "price": 78000,
-      "oldPrice": 150000
+      "price": "78000",
+      "oldPrice": "150000"
     },
     {
       "id": "2",
@@ -137,8 +137,8 @@
       "slug": "ao-thun-nam-co-tron-POLOMAN-vai-Cotton-co-gian-day-dan-form-regular-fit-thoai-mai",
       "imageLink": "https://cf.shopee.vn/file/aed791c1d5e852061b84df75802c42d3_tn",
       "categories": ["1"],
-      "price": 149000,
-      "oldPrice": 150000
+      "price": "149000",
+      "oldPrice": "150000"
     },
     {
       "id": "3",
@@ -146,8 +146,8 @@
       "slug": "Ao-thun-tay-lo-Unisex-Yinxx-ao-phong-form-rong-ATL138",
       "imageLink": "https://cf.shopee.vn/file/199e5c2795dc40b13a12058cca4704a0_tn",
       "categories": ["1", "11"],
-      "price": 69000,
-      "oldPrice": 80000
+      "price": "69000",
+      "oldPrice": "80000"
     },
     {
       "id": "4",
@@ -155,8 +155,8 @@
       "slug": "Sac-Du-Phong-Romoss-Sense-4-10000mah-Chinh-Hang-Check-Code-BH-1-nam",
       "imageLink": "https://cf.shopee.vn/file/dd200b363e9c48af6697e7abd9d5138c_tn",
       "categories": ["2"],
-      "price": 205000,
-      "oldPrice": 289000
+      "price": "205000",
+      "oldPrice": "289000"
     },
     {
       "id": "5",
@@ -164,7 +164,7 @@
       "slug": "Cuong-Luc-Full-Man-10D-Te-Giac-Loai-1-Chinh-Hang",
       "imageLink": "https://cf.shopee.vn/file/bf8f9ec4c12a727f770ee66856c6fd8a_tn",
       "categories": ["2"],
-      "price": 25000,
+      "price": "25000",
       "oldPrice": ""
     },
     {
@@ -173,8 +173,8 @@
       "slug": "LOAI-1-Loa-Keo-Karaoke-Bluetooth-JBZ-NE108-Bass-2-Tac-BH-6-Thang",
       "imageLink": "https://cf.shopee.vn/file/b88fd50ded088571fcc9050997db659c_tn",
       "categories": ["1", "3"],
-      "price": 1090000,
-      "oldPrice": 1800000
+      "price": "1090000",
+      "oldPrice": "1800000"
     },
     {
       "id": "7",
@@ -182,8 +182,8 @@
       "slug": "Tai-Nghe-Nhet-Tai-Hoco-M1-Chinh-Hang-Bao-Hanh-3-Thang-Tai-Nghe-IPhone",
       "imageLink": "https://cf.shopee.vn/file/737839c37e30e7c74bb6c9ce0f4d4ab6_tn",
       "categories": ["1", "3"],
-      "price": 49000,
-      "oldPrice": 70000
+      "price": "49000",
+      "oldPrice": "70000"
     },
     {
       "id": "8",
@@ -191,8 +191,8 @@
       "slug": "ao-thun-bo-sua-tay-lo-form-rong-unisex-ATLBO-8",
       "imageLink": "https://cf.shopee.vn/file/c83764f21a4ffb1e9242ed7188d70f8f_tn",
       "categories": ["1"],
-      "price": 78000,
-      "oldPrice": 150000
+      "price": "78000",
+      "oldPrice": "150000"
     },
     {
       "id": "9",
@@ -200,8 +200,8 @@
       "slug": "ao-thun-bo-sua-tay-lo-form-rong-unisex-ATLBO-9",
       "imageLink": "https://cf.shopee.vn/file/c83764f21a4ffb1e9242ed7188d70f8f_tn",
       "categories": ["1"],
-      "price": 78000,
-      "oldPrice": 150000
+      "price": "78000",
+      "oldPrice": "150000"
     },
     {
       "id": "10",
@@ -209,8 +209,8 @@
       "slug": "ao-thun-bo-sua-tay-lo-form-rong-unisex-ATLBO-10",
       "imageLink": "https://cf.shopee.vn/file/c83764f21a4ffb1e9242ed7188d70f8f_tn",
       "categories": ["1"],
-      "price": 78000,
-      "oldPrice": 150000
+      "price": "78000",
+      "oldPrice": "150000"
     },
     {
       "id": "11",
@@ -218,8 +218,8 @@
       "slug": "ao-thun-bo-sua-tay-lo-form-rong-unisex-ATLBO-11",
       "imageLink": "https://cf.shopee.vn/file/c83764f21a4ffb1e9242ed7188d70f8f_tn",
       "categories": ["1", "3"],
-      "price": 78000,
-      "oldPrice": 150000
+      "price": "78000",
+      "oldPrice": "150000"
     },
     {
       "id": "12",
@@ -227,8 +227,8 @@
       "slug": "ao-thun-bo-sua-tay-lo-form-rong-unisex-TEST-12",
       "imageLink": "https://cf.shopee.vn/file/c83764f21a4ffb1e9242ed7188d70f8f_tn",
       "categories": ["1", "3"],
-      "price": 78000,
-      "oldPrice": 150000
+      "price": "78000",
+      "oldPrice": "150000"
     },
     {
       "id": "13",
@@ -236,8 +236,8 @@
       "slug": "ao-thun-bo-sua-tay-lo-form-rong-unisex-TEST-13",
       "imageLink": "https://cf.shopee.vn/file/c83764f21a4ffb1e9242ed7188d70f8f_tn",
       "categories": ["1", "3"],
-      "price": 78000,
-      "oldPrice": 150000
+      "price": "78000",
+      "oldPrice": "150000"
     },
     {
       "id": "14",
@@ -245,8 +245,8 @@
       "slug": "ao-thun-bo-sua-tay-lo-form-rong-unisex-TEST-14",
       "imageLink": "https://cf.shopee.vn/file/c83764f21a4ffb1e9242ed7188d70f8f_tn",
       "categories": ["1", "3"],
-      "price": 78000,
-      "oldPrice": 150000
+      "price": "78000",
+      "oldPrice": "150000"
     },
     {
       "id": "15",
@@ -254,8 +254,8 @@
       "slug": "ao-thun-bo-sua-tay-lo-form-rong-unisex-TEST-15",
       "imageLink": "https://cf.shopee.vn/file/c83764f21a4ffb1e9242ed7188d70f8f_tn",
       "categories": ["1", "3"],
-      "price": 78000,
-      "oldPrice": 150000
+      "price": "78000",
+      "oldPrice": "150000"
     }
   ]
 }

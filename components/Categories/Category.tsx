@@ -4,13 +4,13 @@ import Link from 'next/link';
 
 import { CategoryItem } from './styled';
 
-import { CategoryType } from 'interfaces';
+import { CategoryType, initCategory } from 'interfaces';
 
 interface Props {
   category: CategoryType;
 }
 
-const Catergory: FC<Props> = ({ category = { imageLink: '' } }) => (
+const Catergory: FC<Props> = ({ category = initCategory }) => (
   <Link href={`/category/${category?.slug}`}>
     <CategoryItem>
       <Image src={category.imageLink} alt={category?.name} width={80} height={80} />
