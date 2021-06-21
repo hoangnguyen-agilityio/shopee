@@ -68,9 +68,6 @@ export const getStaticProps: GetStaticProps = async ({ params = { slug: '' } }) 
       : { data: productsRes.data, meta: productsRes.meta };
 
   if (!validateCategories(categories) || !validateProducts(products.data)) {
-    console.log('validateCategories', validateCategories.errors);
-    console.log('validateProducts', validateProducts.errors);
-    
     return { notFound: true };
   }
 

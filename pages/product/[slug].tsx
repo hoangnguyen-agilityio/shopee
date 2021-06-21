@@ -51,7 +51,6 @@ export const getStaticProps: GetStaticProps = async ({ params = { slug: '' } }) 
     productsRes.data.length === 0 ||
     !validateProducts(resData)
   ) {
-    console.log('validateProducts', validateProducts.errors);
     return { notFound: true };
   }
 
