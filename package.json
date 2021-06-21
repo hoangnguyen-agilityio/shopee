@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@svgr/webpack": "^5.5.0",
+    "ajv": "^8.6.0",
     "next": "10.2.3",
     "next-sitemap": "^1.6.116",
     "react": "17.0.2",

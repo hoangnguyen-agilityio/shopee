@@ -15,21 +15,21 @@ export const initCategory = {
 export interface ProductType {
   id: string;
   name: string;
+  slug: string;
   imageLink: string;
   categories: string[];
-  price: string;
-  oldPrice?: string;
-  slug: string;
+  price: number;
+  oldPrice?: number;
 }
 
 export const initProduct = {
   id: '',
   name: '',
+  slug: '',
   imageLink: '/images/shopee.svg',
   categories: [],
-  price: '',
-  oldPrice: '',
-  slug: '',
+  price: 0,
+  oldPrice: 0,
 };
 
 export interface ProductListType {

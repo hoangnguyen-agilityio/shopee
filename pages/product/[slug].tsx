@@ -1,16 +1,15 @@
 import { GetStaticProps, GetStaticPaths } from 'next';
 import { FC } from 'react';
-import MediaQuery from 'react-responsive';
 import fs from 'fs';
 
 import Header from 'components/Header';
 import Container from 'components/Container';
 import ProductDetail from 'components/ProductDetail';
-import SideBar from 'components/SideBar';
 
-import { ProductListType, CategoryType, initProduct, ProductType } from 'interfaces';
+import { CategoryType, initProduct, ProductType } from 'interfaces';
 import { categoriesFilePath } from 'helper';
 import API from 'helper/api';
+import { validateProducts } from 'helper/validateData';
 
 interface Props {
   product: ProductType;
@@ -44,11 +43,19 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async ({ params = { slug: '' } }) => {
   const productsRes = await API.getProducts(`?slug=${params.slug}`);
-
-  if (productsRes.errorCode || productsRes.apiError || !productsRes.data || productsRes.data.length === 0) {
+  const resData: ProductType[] = productsRes.data;
+  if (
+    productsRes.errorCode ||
+    productsRes.apiError ||
+    !productsRes.data ||
+    productsRes.data.length === 0 ||
+    !validateProducts(resData)
+  ) {
+    console.log('validateProducts', validateProducts.errors);
     return { notFound: true };
   }
-  const product: ProductType = productsRes.data[0];
+
+  const product: ProductType = resData[0];
 
   return {
     props: {

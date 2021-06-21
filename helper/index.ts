@@ -28,4 +28,4 @@ export const categoriesFilePath = () => {
   return path.join(process.cwd(), 'store', 'catergories.json');
 };
 
-export const priceFormat = (price: string | number) => `đ${String(price).replace(/\d(?=(\d{3})+$)/g, '$&,')}`;
+export const priceFormat = (price: number) => `đ${String(price).replace(/\d(?=(\d{3})+$)/g, '$&,')}`;

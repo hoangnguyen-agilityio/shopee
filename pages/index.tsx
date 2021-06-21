@@ -12,6 +12,7 @@ import { CategoryType, ProductListType, initProductList } from 'interfaces';
 import { categoriesFilePath } from 'helper';
 import API from 'helper/api';
 import { PRODUCTS } from 'helper/constTexts';
+import { validateCategories, validateProducts } from 'helper/validateData';
 
 interface Props {
   categories: CategoryType[];
@@ -37,6 +38,13 @@ export const getStaticProps: GetStaticProps = async () => {
     productsRes.errorCode || productsRes.apiError
       ? initProductList
       : { data: productsRes.data, meta: productsRes.meta };
+
+  if (!validateCategories(categories) || !validateProducts(products.data)) {
+    console.log('validateCategories', validateCategories.errors);
+    console.log('validateProducts', validateProducts.errors);
+    
+    return { notFound: true };
+  }
 
   if (categories.length > 0) {
     fs.writeFileSync(categoriesFilePath(), JSON.stringify(categories));

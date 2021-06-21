@@ -11,6 +11,7 @@ import SideBar from 'components/SideBar';
 import { CategoryType, initProductList, ProductListType } from 'interfaces';
 import { categoriesFilePath } from 'helper';
 import API from 'helper/api';
+import { validateCategories, validateProducts } from 'helper/validateData';
 
 interface Props {
   currentCategoryId: string;
@@ -52,6 +53,13 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
     productsRes.errorCode || productsRes.apiError
       ? initProductList
       : { data: productsRes.data, meta: productsRes.meta };
+
+  if (!validateCategories(categories) || !validateProducts(products.data)) {
+    console.log('validateCategories', validateCategories.errors);
+    console.log('validateProducts', validateProducts.errors);
+    
+    return { notFound: true };
+  }
 
   return {
     props: {
